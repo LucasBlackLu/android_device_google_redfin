@@ -118,10 +118,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.thermal_listener.enable=true \
 
-ifeq ($(wildcard vendor/google_devices/redfin/proprietary/device-vendor-redfin.mk),)
-    BUILD_WITHOUT_VENDOR := true
-endif
-
 # USB HAL
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.redfin
@@ -240,3 +236,5 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat
 
 include device/google/redbull/BoardConfig-common.mk
+
+include vendor/google/redfin/BoardConfigVendor.mk
