@@ -8,3 +8,4 @@
 BOOT_KERNEL_MODULES += sec_touch.ko
 
 include device/google/redbull/BoardConfig-common.mk
+include vendor/google/redfin/BoardConfigVendor.mk
