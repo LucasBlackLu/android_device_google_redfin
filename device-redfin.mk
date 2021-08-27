@@ -27,6 +27,9 @@ PRODUCT_SOONG_NAMESPACES += \
     device/google/redfin \
     hardware/qcom/wlan/legacy
 
+# Add before redbull BoardConfigLineage.mk
+BOOT_KERNEL_MODULES += sec_touch.ko
+
 DEVICE_PACKAGE_OVERLAYS += device/google/redfin/redfin/overlay
 
 # Audio XMLs for redfin
