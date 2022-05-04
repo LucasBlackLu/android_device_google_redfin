@@ -32,6 +32,10 @@ BOOT_KERNEL_MODULES += sec_touch.ko
 
 DEVICE_PACKAGE_OVERLAYS += device/google/redfin/redfin/overlay
 
+# HBM
+PRODUCT_PACKAGES += \
+    HbmSVManagerOverlay
+
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
 
