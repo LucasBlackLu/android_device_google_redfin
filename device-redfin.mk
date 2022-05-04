@@ -29,6 +29,10 @@ PRODUCT_SOONG_NAMESPACES += \
 
 DEVICE_PACKAGE_OVERLAYS += device/google/redfin/redfin/overlay
 
+# HBM
+PRODUCT_PACKAGES += \
+    HbmSVManagerOverlay
+
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
 
