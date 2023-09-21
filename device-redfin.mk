@@ -39,6 +39,9 @@ PRODUCT_PACKAGES += \
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
 
+BOOT_SECURITY_PATCH := 2023-10-05
+VENDOR_SECURITY_PATCH := 2023-10-05
+
 # Audio XMLs for redfin
 ifeq ($(wildcard vendor/google_fih/redfin/factory/prebuilt/ftm.mk),)
 PRODUCT_COPY_FILES += \
