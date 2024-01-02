@@ -29,6 +29,9 @@ PRODUCT_SOONG_NAMESPACES += \
 
 DEVICE_PACKAGE_OVERLAYS += device/google/redfin/redfin/overlay
 
+# PowerShare
+include hardware/google/pixel/powershare/device.mk
+
 # Audio XMLs for redfin
 ifeq ($(wildcard vendor/google_fih/redfin/factory/prebuilt/ftm.mk),)
 PRODUCT_COPY_FILES += \
