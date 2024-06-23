@@ -34,4 +34,3 @@ else
 endif
 
 include device/google/redfin/BoardConfigCustom.mk
-BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
