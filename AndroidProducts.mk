@@ -27,4 +27,4 @@ COMMON_LUNCH_CHOICES := \
     aosp_redfin_vf-userdebug \
     aosp_redfin-trunk_staging-userdebug \
     aosp_redfin_vf-trunk_staging-userdebug \
-    derp_redfin-userdebug
+    derp_redfin-trunk_staging-userdebug
