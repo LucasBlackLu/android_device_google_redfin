@@ -25,9 +25,8 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=redfin \
-    PRIVATE_BUILD_DESC="redfin-user 14 UP1A.231105.001.B2 11260668 release-keys"
-
-BUILD_FINGERPRINT := google/redfin/redfin:14/UP1A.231105.001.B2/11260668:user/release-keys
+    BuildDesc="redfin-user 14 UP1A.231105.001.B2 11260668 release-keys" \
+    BuildFingerprint=google/redfin/redfin:14/UP1A.231105.001.B2/11260668:user/release-keys \
+    DeviceProduct=redfin
 
 $(call inherit-product, vendor/google/redfin/redfin-vendor.mk)

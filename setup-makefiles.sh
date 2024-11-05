@@ -20,8 +20,8 @@ export TARGET_ENABLE_CHECKELF=true
 
 HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
-	echo "Unable to find helper script at ${HELPER}"
-	exit 1
+    echo "Unable to find helper script at ${HELPER}"
+    exit 1
 fi
 source "${HELPER}"
 
@@ -43,17 +43,17 @@ function lib_to_package_fixup_vendor_variants() {
     fi
 
     case "$1" in
-        vendor.qti.hardware.tui_comm@1.0 | \
-            vendor.qti.imsrtpservice@3.0)
-            echo "$1-vendor"
-            ;;
-        libprotobuf-cpp-lite-21.12)
-            echo "libprotobuf-cpp-lite"
-            ;;
-        libwpa_client) ;;
-        *)
-            return 1
-            ;;
+    vendor.qti.hardware.tui_comm@1.0 | \
+        vendor.qti.imsrtpservice@3.0)
+        echo "$1-vendor"
+        ;;
+    libprotobuf-cpp-lite-21.12)
+        echo "libprotobuf-cpp-lite"
+        ;;
+    libwpa_client) ;;
+    *)
+        return 1
+        ;;
     esac
 }
 
@@ -72,6 +72,8 @@ write_headers
 write_makefiles "${MY_DIR}/proprietary-files.txt"
 write_makefiles "${MY_DIR}/proprietary-files-carriersettings.txt"
 write_makefiles "${MY_DIR}/proprietary-files-vendor.txt"
+
+append_firmware_calls_to_makefiles "${MY_DIR}/proprietary-firmware.txt"
 
 # Finish
 write_footers
